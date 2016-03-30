@@ -54,15 +54,12 @@ plugins=(git git-extras brew docker node npm osx pip pod python golang)
 # User configuration
 
 export PATH="/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin"
-
-# Override xcode git
-function git {
-  /usr/local/bin/git $argv;
-}
+export DOTFILES=$HOME/.dotfiles
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source $DOTFILES/fn.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
