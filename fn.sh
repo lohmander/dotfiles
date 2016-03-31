@@ -11,3 +11,7 @@ function dev {
 function git {
   /usr/local/bin/git $argv;
 }
+
+function clone {
+  (cd $HOME/Developer/$1 && git clone $2)
+}
