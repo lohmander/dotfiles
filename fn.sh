@@ -11,3 +11,7 @@ function dev {
 function clone {
   (cd $HOME/Developer/$1 && git clone $2)
 }
+
+function dmenv {
+    eval "$(dm env default)"
+}

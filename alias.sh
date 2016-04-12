@@ -3,7 +3,6 @@
 
 # Docker
 alias dm="docker-machine"
-alias dmenv="eval \"$(dm env default)\""
 
 # git
 alias git='/usr/local/bin/git'
