@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/hanneslohmander/.oh-my-zsh
+export ZSH=/Users/$(users)/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -62,6 +62,7 @@ export PATH="/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:$GOBIN"
 
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/fn.sh
+source $DOTFILES/alias.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -87,3 +88,5 @@ source $DOTFILES/fn.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
