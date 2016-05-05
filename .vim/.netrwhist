@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/hanneslohmander/.dotfiles'
 let g:netrw_dirhist_2='/Users/hanneslohmander/Git/Go/src/bitbucket.org/dejsay/election-backend'
+let g:netrw_dirhist_3='/Users/hanneslohmander/Git/Elixir/dejsay'
