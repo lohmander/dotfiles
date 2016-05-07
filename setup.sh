@@ -65,18 +65,40 @@ function install_ycm {
   ./install.py --gocode-completer
 
   cd $start_dir
- 
+
   echo -e "\n=> Done installing YouCompleteMe."
 }
 
 function setup_gitignore {
   echo -n "=> Setting up .gitignore..."
-  
+
   echo -e ".DSStore\n*.swp" > ~/.gitignore
 
   git config --global core.excludesfile '~/.gitignore'
-  
+
   echo -e "\tDone."
+}
+
+function install_basics {
+  echo -n "=> Installing wget..."
+
+  brew install wget &> /dev/null
+
+  echo -e "\t\tDone."
+}
+
+function install_font {
+  echo -n "=> Installing Source Code Pro font..."
+
+  {
+    wget https://github.com/adobe-fonts/source-code-pro/archive/2.010R-ro/1.030R-it.tar.gz
+    tar -zxvf 1.030R-it.tar.gz
+    mv source-code-pro-2.010R-ro-1.030R-it/OTF/*.otf /Users/$(whoami)/Library/Fonts/
+    rm -rf source-code-pro-2.010R-ro-1.030R-it
+    rm -rf 1.030R-it.tar.gz
+  } &> /dev/null
+
+ echo -e "\tDone."
 }
 
 sudo echo ""
@@ -87,6 +109,8 @@ install_nodejs
 install_go
 install_macvim
 install_ycm
+install_basics
+install_font
 setup_gitignore
 create_symlinks
 

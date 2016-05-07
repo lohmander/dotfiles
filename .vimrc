@@ -4,7 +4,7 @@ syntax on
 filetype plugin indent on
 
 set number
-set guifont=Monaco:h12
+set guifont=Source\ Code\ Pro:h12
 
 colorscheme atom-dark
 
