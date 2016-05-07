@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/vim-bufonly"]
 	path = .vim/bundle/vim-bufonly
 	url = https://github.com/schickling/vim-bufonly.git
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
