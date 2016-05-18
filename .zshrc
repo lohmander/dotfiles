@@ -5,7 +5,7 @@ export ZSH=/Users/$(whoami)/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="avit"
+ZSH_THEME="mortalscumbag"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -56,7 +56,7 @@ plugins=(git git-extras brew docker node npm osx pip pod python golang)
 export GOPATH=$HOME/Developer/go
 export GOBIN=$GOPATH/bin
 export DOTFILES=$HOME/.dotfiles
-export PATH="/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:$GOBIN"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOBIN"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
