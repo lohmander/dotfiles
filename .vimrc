@@ -9,6 +9,8 @@ set t_Co=256
 set background=dark
 set laststatus=2
 set backspace=indent,eol,start
+set splitbelow
+set splitright
 
 colorscheme PaperColor
 
