@@ -56,7 +56,7 @@ plugins=(git git-extras brew docker node npm osx pip pod python golang)
 export GOPATH=$HOME/Developer/go
 export GOBIN=$GOPATH/bin
 export DOTFILES=$HOME/.dotfiles
-export PATH="/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:$GOBIN"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOBIN"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

@@ -4,7 +4,7 @@ syntax on
 filetype plugin indent on
 
 set number
-set guifont=Source\ Code\ Pro\ Light:h12
+set guifont=Source\ Code\ Pro:h12
 set t_Co=256
 set background=dark
 set laststatus=2
