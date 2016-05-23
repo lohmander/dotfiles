@@ -24,3 +24,7 @@ function del_merged {
     | grep -v development \
     | xargs -n 1 git branch -d
 }
+
+function reload_zsh {
+  source ~/.zshrc
+}
