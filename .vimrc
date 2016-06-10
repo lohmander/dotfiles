@@ -6,15 +6,15 @@ filetype plugin indent on
 set number
 set guifont=Source\ Code\ Pro:h12
 set t_Co=256
-set background=dark
 set laststatus=2
 set backspace=indent,eol,start
 set clipboard=unnamed
 set splitbelow
 set splitright
 
-colorscheme PaperColor
+colorscheme Kafka
 
+let mapleader=","
 let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build'
 let g:elm_format_autosave = 1
