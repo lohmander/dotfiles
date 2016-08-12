@@ -1,5 +1,5 @@
 execute pathogen#infect()
-syntax on
+syntax enable
 
 filetype plugin indent on
 
@@ -12,8 +12,9 @@ set clipboard=unnamed
 set splitbelow
 set splitright
 set backupcopy=yes
+set background=dark
 
-colorscheme Kafka
+colo seoul256
 
 let mapleader=","
 let g:airline#extensions#tabline#enabled = 1
@@ -33,7 +34,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 
 let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
