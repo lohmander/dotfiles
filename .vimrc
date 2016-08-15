@@ -4,7 +4,7 @@ syntax enable
 filetype plugin indent on
 
 set number
-set guifont=Source\ Code\ Pro:h12
+set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 set t_Co=256
 set laststatus=2
 set backspace=indent,eol,start
@@ -18,6 +18,9 @@ colo seoul256
 
 let mapleader=","
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='zenburn'
+
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build'
 
 " Elm stuff
