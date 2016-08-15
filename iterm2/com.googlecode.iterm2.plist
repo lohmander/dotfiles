@@ -692,7 +692,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-4150 918 620 392 -5120 150 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-2051 903 796 473 -2560 150 2560 1417 </string>
+	<string>-2051 903 796 473 -2560 150 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>-4550 703 570 474 -5120 150 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1470,7 +1470,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blinking Cursor</key>
-			<false/>
+			<true/>
 			<key>Blur</key>
 			<false/>
 			<key>Bold Color</key>
@@ -1523,6 +1523,8 @@
 				<key>Red Component</key>
 				<real>0.22745098039215686</real>
 			</dict>
+			<key>Cursor Type</key>
+			<integer>0</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -1862,7 +1864,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Regular 12</string>
+			<string>SauceCodePowerline-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1874,7 +1876,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>5000</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1895,6 +1897,8 @@
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
+			<key>Session Close Undo Timeout</key>
+			<integer>30</integer>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
@@ -1905,6 +1909,8 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
+			<key>Thin Strokes</key>
+			<integer>2</integer>
 			<key>Transparency</key>
 			<real>0.041875462278106526</real>
 			<key>Unlimited Scrollback</key>

@@ -36,7 +36,7 @@ let g:elm_syntastic_show_warnings = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 
-let &colorcolumn=join(range(81,999),",")
+let &colorcolumn=join(range(81,9999),",")
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
