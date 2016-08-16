@@ -40,3 +40,21 @@
 [submodule ".vim/bundle/elm-vim"]
 	path = .vim/bundle/elm-vim
 	url = https://github.com/ElmCast/elm-vim.git
+[submodule ".vim/bundle/tender.vim"]
+	path = .vim/bundle/tender.vim
+	url = https://github.com/jacoborus/tender.vim.git
+[submodule ".vim/bundle/lightline.vim"]
+	path = .vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule ".vim/bundle/seoul256.vim"]
+	path = .vim/bundle/seoul256.vim
+	url = https://github.com/junegunn/seoul256.vim.git
+[submodule ".vim/bundle/vim-jsx"]
+	path = .vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule ".vim/bundle/vim-stylish-haskell"]
+	path = .vim/bundle/vim-stylish-haskell
+	url = https://github.com/nbouscal/vim-stylish-haskell.git
+[submodule ".vim/bundle/vim-haskell-indent"]
+	path = .vim/bundle/vim-haskell-indent
+	url = https://github.com/itchyny/vim-haskell-indent.git
