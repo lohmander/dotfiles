@@ -38,23 +38,6 @@ function install_go {
   echo -e "\t\tDone."
 }
 
-function install_macvim {
-  echo -n "=> Installing MacVim..."
-
-  if [ ! -d "/Applications/MacVim.app" ]; then
-    {
-      rm -rf ~/Downloads/MacVim.dmg
-      wget https://github.com/macvim-dev/macvim/releases/download/snapshot-102/MacVim.dmg -P ~/Downloads/
-      hdiutil attach ~/Downloads/MacVim.dmg
-      sudo cp -r /Volumes/MacVim/MacVim.app /Applications/MacVim.app
-      sudo cp /Volumes/MacVim/mvim /usr/local/bin/mvim
-    } &> /dev/null
-    echo -e "\t\tDone."
-  else
-    echo -e "\t\tSkipped."
-  fi
-}
-
 function install_ycm {
   echo -e "=> Installing YouCompleteMe...\n\n"
   start_dir=$(pwd)
