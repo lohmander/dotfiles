@@ -7,15 +7,14 @@ set number
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 set t_Co=256
 set laststatus=2
-set background=dark
 set backspace=indent,eol,start
 set clipboard=unnamed
 set splitbelow
 set splitright
 set backupcopy=yes
-set background=dark
+set background=light
 
-colo seoul256
+colo seoul256-light
 
 let mapleader=","
 let g:airline#extensions#tabline#enabled = 1
