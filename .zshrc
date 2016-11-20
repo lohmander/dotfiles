@@ -58,6 +58,9 @@ export GOBIN=$GOPATH/bin
 export DOTFILES=$HOME/.dotfiles
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOBIN:$HOME/Library/Haskell/bin:$PATH"
 export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.4.1_1
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
