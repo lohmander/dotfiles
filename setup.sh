@@ -20,8 +20,7 @@ function create_symlinks {
   rm -rf ~/.vimrc
 
   ln -s ~/.dotfiles/.zshrc ~/.zshrc
-  ln -s ~/.dotfiles/.vimrc ~/.vimrc
-  ln -s ~/.dotfiles/.vim ~/.vim
+  ln -s ~/.dotfiles/.nvim ~/.config/nvim
 
   echo -e "\t\tDone."
 }
@@ -36,20 +35,6 @@ function install_go {
   echo -n "=> Installing Go..."
   brew install golang &> /dev/null
   echo -e "\t\tDone."
-}
-
-function install_ycm {
-  echo -e "=> Installing YouCompleteMe...\n\n"
-  start_dir=$(pwd)
-
-  cd ~/.dotfiles/.vim/bundle/YouCompleteMe
-
-  git submodule update --init --recursive
-  ./install.py --gocode-completer
-
-  cd $start_dir
-
-  echo -e "\n=> Done installing YouCompleteMe."
 }
 
 function setup_gitignore {
@@ -90,8 +75,6 @@ install_git
 install_omz
 install_nodejs
 install_go
-install_macvim
-install_ycm
 install_basics
 install_font
 setup_gitignore
