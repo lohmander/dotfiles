@@ -13,6 +13,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'tell-k/vim-autopep8'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ap/vim-css-color'
+Plug 'othree/yajs.vim'
 
 call plug#end()
 
@@ -35,6 +36,9 @@ let g:airline_theme = 'sol'
 let g:neomake_python_python_maker = {
     \ 'exe': 'python3',
     \ }
+
+let g:neomake_javascript_enabled_makers = ['eslint']
+
 autocmd! BufWritePost * Neomake
 
 " autopep8
@@ -48,8 +52,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build\|\v\.(o
 let g:indent_guides_start_level=1
 let g:indent_guides_guide_size=1
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#eeeeee   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#cecece ctermbg=4
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#dddddd   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#dddddd ctermbg=4
 autocmd VimEnter * :IndentGuidesEnable
 
 " disable stuff
