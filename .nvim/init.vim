@@ -14,6 +14,9 @@ Plug 'tell-k/vim-autopep8'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ap/vim-css-color'
 Plug 'othree/yajs.vim'
+Plug 'udalov/kotlin-vim'
+Plug 'schickling/vim-bufonly'
+Plug 'othree/es.next.syntax.vim'
 
 call plug#end()
 
