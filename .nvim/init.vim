@@ -25,7 +25,7 @@ filetype plugin indent on
 
 " colors
 colo seoul256
-set background=light
+set background=dark
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
@@ -33,7 +33,7 @@ let g:deoplete#enable_at_startup = 1
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'sol'
+let g:airline_theme = 'zenburn'
 
 " neomake
 let g:neomake_python_python_maker = {
@@ -55,8 +55,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build\|\v\.(o
 let g:indent_guides_start_level=1
 let g:indent_guides_guide_size=1
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#dddddd   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#dddddd ctermbg=4
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#444444   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#444444 ctermbg=4
 autocmd VimEnter * :IndentGuidesEnable
 
 " disable stuff
