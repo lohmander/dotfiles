@@ -17,6 +17,9 @@ Plug 'othree/yajs.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'schickling/vim-bufonly'
 Plug 'othree/es.next.syntax.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -44,6 +47,24 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 
 autocmd! BufWritePost * Neomake
 
+" neosnippet
+
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+
+" git gutter
+
+let g:gitgutter_updatetime = 250
+
 " autopep8
 let g:autopep8_disable_show_diff = 1
 autocmd BufWritePre *.py :Autopep8
@@ -55,8 +76,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build\|\v\.(o
 let g:indent_guides_start_level=1
 let g:indent_guides_guide_size=1
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#444444   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#444444 ctermbg=4
 autocmd VimEnter * :IndentGuidesEnable
 
 " disable stuff
