@@ -27,7 +27,7 @@ syntax enable
 filetype plugin indent on
 
 " colors
-colo seoul256
+colo seoul256-mod
 set background=dark
 
 " deoplete
