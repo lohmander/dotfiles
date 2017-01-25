@@ -68,6 +68,18 @@ source $ZSH/oh-my-zsh.sh
 source $DOTFILES/fn.sh
 source $DOTFILES/alias.sh
 
+# Handle auto update
+
+last_dotfiles_update=$(cat ~/.dotfilesupdate || echo 0)
+current_time=$(date +%s)
+update_time_diff=$(($current_time - $last_dotfiles_update))
+
+if [ $update_time_diff -gt 3600 ]; then
+    echo "Last update was ${update_time_diff}s ago. Updating dotfiles..."
+    (cd ~/.dotfiles && git pull)
+    echo $current_time > ~/.dotfilesupdate
+fi
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
