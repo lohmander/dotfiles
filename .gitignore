@@ -1,3 +1,4 @@
 .DS_Store
 .nvim/plugged
 .nvim/.netrwhist
+.nvim/colors/seoul256-modified.vim
