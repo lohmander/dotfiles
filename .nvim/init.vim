@@ -20,6 +20,7 @@ Plug 'othree/es.next.syntax.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'airblade/vim-gitgutter'
+Plug 'keith/swift.vim'
 
 call plug#end()
 
@@ -32,6 +33,7 @@ set background=dark
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#jedi#show_docstring = 1
 
 " airline
 let g:airline#extensions#tabline#enabled = 1

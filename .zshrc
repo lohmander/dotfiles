@@ -56,7 +56,7 @@ plugins=(git git-extras brew docker node npm osx pip pod python golang)
 export GOPATH=$HOME/Developer/go
 export GOBIN=$GOPATH/bin
 export DOTFILES=$HOME/.dotfiles
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOBIN:$HOME/Library/Haskell/bin:$HOME/.dotfiles/scripts:$PATH"
+export PATH="$PATH:/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:$GOBIN:$HOME/Library/Haskell/bin:$HOME/.dotfiles/scripts"
 export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.4.1_1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -106,3 +106,13 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/hanneslohmander/Downloads/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/hanneslohmander/Downloads/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/hanneslohmander/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/hanneslohmander/Downloads/google-cloud-sdk/completion.zsh.inc'
+fi

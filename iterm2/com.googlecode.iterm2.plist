@@ -698,9 +698,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>1949 139 606 456 1680 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>515 335 918 381 0 0 1680 1028 </string>
+	<string>685 504 918 381 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3453 350 746 801 1680 0 2560 1418 </string>
+	<string>1744 20 2418 1398 1680 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>3620 63 618 1354 1680 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1494,13 +1494,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0704374760389328</real>
+				<real>0.07111852616071701</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.081965155899524689</real>
+				<real>0.081519924104213715</real>
 				<key>Red Component</key>
-				<real>0.094074979424476624</real>
+				<real>0.094671934843063354</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -2045,7 +2045,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-01-09T11:16:54Z</date>
+	<date>2017-01-11T11:17:04Z</date>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>TabStyle</key>
