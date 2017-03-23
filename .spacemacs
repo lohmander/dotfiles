@@ -31,7 +31,8 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     haskell
+     (haskell :variables
+              haskell-enable-hindent-style "johan-tibell")
      python
      django
      javascript
