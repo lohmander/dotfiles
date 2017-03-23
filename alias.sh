@@ -1,6 +1,9 @@
 #!/bin/bash
 # alias.sh
 
+# Emacs
+alias em="emacs -nw"
+
 # Docker
 alias dm="docker-machine"
 
