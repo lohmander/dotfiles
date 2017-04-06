@@ -107,9 +107,7 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
   source '/Users/hanneslohmander/Downloads/google-cloud-sdk/path.zsh.inc'
-fi
   source '/Users/hanneslohmander/Downloads/google-cloud-sdk/completion.zsh.inc'
-fi
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /Users/hanneslohmander/Downloads/google-cloud-sdk/path.zsh.inc ]; then
@@ -120,3 +118,5 @@ fi
 if [ -f /Users/hanneslohmander/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/hanneslohmander/Downloads/google-cloud-sdk/completion.zsh.inc'
 fi
+
+export PATH="$HOME/.yarn/bin:$PATH"
