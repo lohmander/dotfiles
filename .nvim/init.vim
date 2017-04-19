@@ -21,15 +21,17 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'keith/swift.vim'
+Plug 'mhartington/oceanic-next'
 
 call plug#end()
 
 syntax enable
 filetype plugin indent on
+colorscheme OceanicNext
 
-" colors
-colo seoul256-modified
-set background=dark
+if (has("termguicolors"))
+    set termguicolors
+endif
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
