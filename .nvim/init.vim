@@ -22,6 +22,8 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'keith/swift.vim'
 Plug 'mhartington/oceanic-next'
+Plug 'flowtype/vim-flow'
+Plug 'neovimhaskell/haskell-vim'
 
 call plug#end()
 
