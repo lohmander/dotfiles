@@ -3,7 +3,6 @@ call plug#begin('~/.config/nvim/plugged')
 " Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
-Plug 'zchee/deoplete-go'
 Plug 'steelsojka/deoplete-flow'
 
 " Utils
@@ -28,6 +27,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'othree/yajs.vim'
 Plug 'othree/es.next.syntax.vim'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'fatih/vim-go'
 
 " Syntax
 Plug 'mhartington/oceanic-next'
