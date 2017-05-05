@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-go'
 Plug 'steelsojka/deoplete-flow'
 
 " Utils
