@@ -120,3 +120,6 @@ if [ -f /Users/hanneslohmander/Downloads/google-cloud-sdk/completion.zsh.inc ]; 
 fi
 
 export PATH="$HOME/.yarn/bin:$PATH"
+
+# OPAM configuration
+. /Users/hanneslohmander/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

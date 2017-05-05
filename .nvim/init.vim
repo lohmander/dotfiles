@@ -1,29 +1,36 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-go'
+Plug 'steelsojka/deoplete-flow'
+
+" Utils
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'junegunn/seoul256.vim'
 Plug 'neomake/neomake'
-Plug 'jiangmiao/auto-pairs'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'zchee/deoplete-jedi'
-Plug 'tell-k/vim-autopep8'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ap/vim-css-color'
-Plug 'othree/yajs.vim'
-Plug 'udalov/kotlin-vim'
-Plug 'schickling/vim-bufonly'
-Plug 'othree/es.next.syntax.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'jiangmiao/auto-pairs'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tell-k/vim-autopep8'
+Plug 'schickling/vim-bufonly'
+
+" Airline and guides
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'keith/swift.vim'
-Plug 'mhartington/oceanic-next'
-Plug 'flowtype/vim-flow'
+Plug 'nathanaelkane/vim-indent-guides'
+
+" Languages
+Plug 'othree/yajs.vim'
+Plug 'othree/es.next.syntax.vim'
 Plug 'neovimhaskell/haskell-vim'
+
+" Syntax
+Plug 'mhartington/oceanic-next'
 
 call plug#end()
 
