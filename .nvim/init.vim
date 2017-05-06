@@ -17,6 +17,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tell-k/vim-autopep8'
 Plug 'schickling/vim-bufonly'
+Plug 'scrooloose/nerdtree'
 
 " Airline and guides
 Plug 'vim-airline/vim-airline'
@@ -46,6 +47,9 @@ endif
 " deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#show_docstring = 1
+
+" nerdtree
+map <C-n> :NERDTreeToggle<CR>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
