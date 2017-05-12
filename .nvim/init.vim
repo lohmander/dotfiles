@@ -18,6 +18,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tell-k/vim-autopep8'
 Plug 'schickling/vim-bufonly'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
 
 " Airline and guides
 Plug 'vim-airline/vim-airline'
@@ -33,6 +35,7 @@ Plug 'fatih/vim-go'
 
 " Syntax
 Plug 'mhartington/oceanic-next'
+
 
 call plug#end()
 
