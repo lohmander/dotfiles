@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-go'
-Plug 'steelsojka/deoplete-flow'
+Plug 'carlitux/deoplete-ternjs'
 
 " Utils
 Plug 'ctrlpvim/ctrlp.vim'
@@ -18,6 +18,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tell-k/vim-autopep8'
 Plug 'schickling/vim-bufonly'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'Chiel92/vim-autoformat'
 
 " Airline and guides
 Plug 'vim-airline/vim-airline'
@@ -26,8 +28,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Languages
-Plug 'othree/yajs.vim'
-Plug 'othree/es.next.syntax.vim'
+Plug 'pangloss/vim-javascript'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'fatih/vim-go'
 
@@ -61,9 +62,14 @@ let g:neomake_python_python_maker = {
     \ 'exe': 'python3',
     \ }
 
-let g:neomake_javascript_enabled_makers = ['eslint']
+
+let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
 
 autocmd! BufWritePost * Neomake
+
+" javascript
+
+let g:javascript_plugin_flow = 1
 
 " neosnippet
 
