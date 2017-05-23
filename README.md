@@ -14,7 +14,7 @@ $ brew install wget git golang nodejs python3
 ### NPM
 
 ```
-$ npm install -g flow-bin elm
+$ npm install -g flow-bin elm tern
 ```
 
 ### Go

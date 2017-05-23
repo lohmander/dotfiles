@@ -20,6 +20,8 @@ Plug 'schickling/vim-bufonly'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'Chiel92/vim-autoformat'
+Plug 'scrooloose/nerdcommenter'
+
 
 " Airline and guides
 Plug 'vim-airline/vim-airline'
@@ -34,6 +36,7 @@ Plug 'fatih/vim-go'
 
 " Syntax
 Plug 'mhartington/oceanic-next'
+
 
 call plug#end()
 
