@@ -19,8 +19,8 @@ Plug 'tell-k/vim-autopep8'
 Plug 'schickling/vim-bufonly'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'Chiel92/vim-autoformat'
 Plug 'scrooloose/nerdcommenter'
+Plug 'sbdchd/neoformat'
 
 
 " Airline and guides
@@ -33,6 +33,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'fatih/vim-go'
+Plug 'martinda/Jenkinsfile-vim-syntax'
 
 " Syntax
 Plug 'mhartington/oceanic-next'
@@ -59,6 +60,16 @@ map <C-t> :NERDTreeToggle<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'zenburn'
+
+" neoformat
+"
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * Neoformat
+augroup END
+
+let g:neoformat_enabled_python = ['yapf']
+let g:neoformat_enabled_javascript = ['prettier']
 
 " neomake
 let g:neomake_python_python_maker = {
@@ -87,14 +98,9 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
-
 " git gutter
 
 let g:gitgutter_updatetime = 250
-
-" autopep8
-let g:autopep8_disable_show_diff = 1
-autocmd BufWritePre *.py :Autopep8
 
 " ctrl p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|deps\|_build\|\v\.(o|hi)$'
