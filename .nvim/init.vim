@@ -5,6 +5,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-go'
 Plug 'carlitux/deoplete-ternjs'
+Plug 'steelsojka/deoplete-flow'
 
 " Utils
 Plug 'ctrlpvim/ctrlp.vim'
@@ -34,6 +35,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'fatih/vim-go'
 Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'reasonml/vim-reason'
 
 " Syntax
 Plug 'mhartington/oceanic-next'
@@ -52,6 +54,11 @@ endif
 " deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#show_docstring = 1
+let g:deoplete#file#enable_buffer_path = 1
+let g:deoplete#auto_complete_start_length = 1
+let g:deoplete#omni#input_patterns = {}
+let g:deoplete#omni#input_patterns.ocaml = '[.\w]+'
+let g:deoplete#omni#input_patterns.reason = '[.\w]+'
 
 " nerdtree
 map <C-t> :NERDTreeToggle<CR>
@@ -76,14 +83,31 @@ let g:neomake_python_python_maker = {
     \ 'exe': 'python3',
     \ }
 
-
-let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
+let g:neomake_logfile=$HOME.'/.vim/log/neomake.log'
+let g:neomake_javascript_enabled_makers = ['flow']
 
 autocmd! BufWritePost * Neomake
 
 " javascript
+"
+let g:deoplete#sources#flow#flow_bin = 'flow'
 
-let g:javascript_plugin_flow = 1
+function! StrTrim(txt)
+  return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
+endfunction
+
+let g:flow_path = StrTrim(system('PATH=$(npm bin):$PATH && which flow'))
+
+if g:flow_path != 'flow not found'
+  let g:deoplete#sources#flow#flow_bin = g:flow_path
+endif
+
+" reason
+
+autocmd FileType reason map <buffer> <D-M> :ReasonPrettyPrint<Cr>
+
+let g:neomake_reason_enabled_makers = ['merlin']
+let g:vimreason_extra_args_expr_reason = '"--print-width 80"'
 
 " neosnippet
 
