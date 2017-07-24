@@ -105,21 +105,13 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-  source '/Users/hanneslohmander/Downloads/google-cloud-sdk/path.zsh.inc'
-  source '/Users/hanneslohmander/Downloads/google-cloud-sdk/completion.zsh.inc'
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f /Users/hanneslohmander/Downloads/google-cloud-sdk/path.zsh.inc ]; then
-  source '/Users/hanneslohmander/Downloads/google-cloud-sdk/path.zsh.inc'
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f /Users/hanneslohmander/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/Users/hanneslohmander/Downloads/google-cloud-sdk/completion.zsh.inc'
-fi
-
 export PATH="$HOME/.yarn/bin:$PATH"
 
 # OPAM configuration
 . /Users/hanneslohmander/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/hannes/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/hannes/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/hannes/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/hannes/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
