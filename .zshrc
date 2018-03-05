@@ -56,7 +56,6 @@ plugins=(git git-extras brew docker node npm osx pip pod python golang)
 export GOPATH=$HOME/Developer/go
 export GOBIN=$GOPATH/bin
 export DOTFILES=$HOME/.dotfiles
-export PATH="$PATH:/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:$GOBIN:$HOME/Library/Haskell/bin:$HOME/.dotfiles/scripts"
 export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.4.1_1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -70,15 +69,17 @@ source $DOTFILES/alias.sh
 
 # Handle auto update
 
-last_dotfiles_update=$(cat ~/.dotfilesupdate || echo 0)
-current_time=$(date +%s)
-update_time_diff=$(($current_time - $last_dotfiles_update))
+function update_dotfiles {
+  last_dotfiles_update=$(cat ~/.dotfilesupdate || echo 0)
+  current_time=$(date +%s)
+  update_time_diff=$(($current_time - $last_dotfiles_update))
 
-if [ $update_time_diff -gt 3600 ]; then
-    echo "Last update was ${update_time_diff}s ago. Updating dotfiles..."
-    (cd ~/.dotfiles && git pull)
-    echo $current_time > ~/.dotfilesupdate
-fi
+  if [ $update_time_diff -gt 3600 ]; then
+      echo "Last update was ${update_time_diff}s ago. Updating dotfiles..."
+      (cd ~/.dotfiles && git pull)
+      echo $current_time > ~/.dotfilesupdate
+  fi
+}
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -109,9 +110,3 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 # OPAM configuration
 . /Users/hanneslohmander/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/hannes/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/hannes/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/hannes/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/hannes/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
